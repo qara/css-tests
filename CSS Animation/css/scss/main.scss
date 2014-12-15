@@ -1,0 +1,79 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300");
+
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+          transform: $transform;
+
+}
+
+
+body{
+  background: #ccc;
+  font: 13px 'open sans';
+
+}
+
+div#div1{
+  animation-name:spin;
+  animation-duration: 3s;
+  animation-iteration-count: 10;
+  padding: 20px;
+  background: silver;
+  width: 100px;
+  height: 50px;
+}
+@keyframes spin {
+  0% { @include transform(rotate(0deg)); }
+  25% { @include transform(rotate(30deg)) ; }
+  50% { @include transform(rotate(120deg)) ; }
+  100% { @include transform(rotate(360deg)) ; }
+}
+
+
+
+
+div{
+  background: white;
+  margin: 10em auto;
+  padding: 2rem;
+  width: 50em;
+
+  ul{
+    list-style: none;
+    padding: 8px;
+    text-align: center;
+
+    li{
+      -webkit-transition: border-width 100ms ;
+      -moz-transition: border-width 2s ;
+      -ms-transition: border-width 2s ;
+      -o-transition: border-width 2s ;
+      transition: border-width 100ms ;
+      border-width: 1px;
+      display: inline-block;
+      margin-left: 10px;
+
+
+
+
+      a{
+        color: rgb(0,120,200);
+        font-size: 1.5rem;
+        text-decoration: none;
+
+      }
+
+    }
+    li.active{
+      border-bottom: 4px orange solid ;
+    }
+    li:hover{
+             border-bottom: 4px orange solid;
+      border-width :5px;
+           }
+  }
+}
+
+

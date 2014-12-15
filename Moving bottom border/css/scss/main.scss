@@ -1,0 +1,87 @@
+//colors
+$white: #fff;
+$color_jungle_green_approx: #2cc185;
+$color_boulder_approx: #74777b;
+
+
+
+
+.tabs nav ul {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+.tabs nav ul li {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+
+
+
+
+.tabs-style-linemove nav {
+  background: $white;
+  li {
+    &:last-child::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #2CC185;
+      content: '';
+      transition: transform 0.3s;
+    }
+    &:first-child.tab-current ~ li:last-child::before {
+      transform: translate3d(-400%,0,0);
+    }
+    &:nth-child(2).tab-current ~ li:last-child::before {
+                     transform: translate3d(-300%,0,0);
+                   }
+&:nth-child(3).tab-current ~ li:last-child::before {
+                 transform: translate3d(-200%,0,0);
+               }
+&:nth-child(4).tab-current ~ li:last-child::before {
+                 transform: translate3d(-100%,0,0);
+               }
+&.tab-current a {
+  color: #2CC185;
+  transform: translate3d(0,8px,0);
+}
+}
+a {
+  padding: 1em 0;
+  color: $color_boulder_approx;
+  line-height: 1;
+  transition: color 0.3s, transform 0.3s;
+  span {
+    font-weight: 700;
+  }
+}
+}
+

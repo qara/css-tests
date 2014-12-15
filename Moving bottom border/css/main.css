@@ -1,0 +1,84 @@
+/* line 9, scss/main.scss */
+.tabs nav ul {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+/* line 31, scss/main.scss */
+.tabs nav ul li {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* line 47, scss/main.scss */
+.tabs-style-linemove nav {
+  background: white;
+}
+/* line 50, scss/main.scss */
+.tabs-style-linemove nav li:last-child::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #2CC185;
+  content: '';
+  transition: transform 0.3s;
+}
+/* line 60, scss/main.scss */
+.tabs-style-linemove nav li:first-child.tab-current ~ li:last-child::before {
+  transform: translate3d(-400%, 0, 0);
+}
+/* line 63, scss/main.scss */
+.tabs-style-linemove nav li:nth-child(2).tab-current ~ li:last-child::before {
+  transform: translate3d(-300%, 0, 0);
+}
+/* line 66, scss/main.scss */
+.tabs-style-linemove nav li:nth-child(3).tab-current ~ li:last-child::before {
+  transform: translate3d(-200%, 0, 0);
+}
+/* line 69, scss/main.scss */
+.tabs-style-linemove nav li:nth-child(4).tab-current ~ li:last-child::before {
+  transform: translate3d(-100%, 0, 0);
+}
+/* line 72, scss/main.scss */
+.tabs-style-linemove nav li.tab-current a {
+  color: #2CC185;
+  transform: translate3d(0, 8px, 0);
+}
+/* line 77, scss/main.scss */
+.tabs-style-linemove nav a {
+  padding: 1em 0;
+  color: #74777b;
+  line-height: 1;
+  transition: color 0.3s, transform 0.3s;
+}
+/* line 82, scss/main.scss */
+.tabs-style-linemove nav a span {
+  font-weight: 700;
+}

@@ -1,0 +1,75 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300");
+body {
+  background: #ccc;
+  font: 13px 'open sans';
+}
+
+div#div1 {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: 10;
+  padding: 20px;
+  background: silver;
+  width: 100px;
+  height: 50px;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    transform: rotate(120deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+div {
+  background: white;
+  margin: 10em auto;
+  padding: 2rem;
+  width: 50em;
+}
+div ul {
+  list-style: none;
+  padding: 8px;
+  text-align: center;
+}
+div ul li {
+  -webkit-transition: border-width 100ms;
+  -moz-transition: border-width 2s;
+  -ms-transition: border-width 2s;
+  -o-transition: border-width 2s;
+  transition: border-width 100ms;
+  border-width: 1px;
+  display: inline-block;
+  margin-left: 10px;
+}
+div ul li a {
+  color: #0078c8;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+div ul li.active {
+  border-bottom: 4px orange solid;
+}
+div ul li:hover {
+  border-bottom: 4px orange solid;
+  border-width: 5px;
+}
